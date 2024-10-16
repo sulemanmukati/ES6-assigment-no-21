@@ -110,15 +110,12 @@ const Home = () => {
       });
   }, []);
 
-  // Render each product card
   const renderProduct = ({ item }) => (
     <TouchableOpacity style={styles.cardContainer}>
       <Card style={styles.card}>
-        {/* Card Image */}
         <Card.Cover 
           source={{ uri: item.image }} 
-          style={styles.cardImage} // Control image size to be uniform
-        />
+          style={styles.cardImage} />
         <Card.Content>
           <Text style={styles.title}>{item.title}</Text> 
           <Text style={styles.price}>${item.price}</Text> 
